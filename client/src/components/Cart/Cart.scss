@@ -1,0 +1,148 @@
+$color-blue: #2789fe;
+
+.cart {
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  min-width: 400px;
+  min-height: 200px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 1);
+
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .link {
+    text-decoration: none;
+    color: $color-blue;
+
+    &:visited {
+      color: $color-blue;
+    }
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    overflow: auto;
+    max-height: 330px;
+
+    .item {
+      height: 155px;
+      width: 400px;
+      display: flex;
+      gap: 12px;
+
+      .left {
+        width: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .right {
+        height: 155px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .title {
+          font-size: 16px;
+        }
+
+        .desc {
+          font-size: 12px;
+          letter-spacing: 0.6px;
+        }
+
+        .size {
+          font-size: 13px;
+
+          span {
+            text-transform: uppercase;
+          }
+        }
+
+        .price {
+          font-size: 14px;
+          color: $color-blue;
+        }
+
+        .delete-btn {
+          color: tomato;
+          cursor: pointer;
+          font-size: 24px;
+
+          &:hover {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .subtotal {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      font-size: 18px;
+
+      span:first-child {
+        text-transform: uppercase;
+      }
+    }
+
+    .option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .checkout-btn {
+        color: white;
+        background-color: $color-blue;
+        border: none;
+        padding: 10px 16px;
+        text-transform: uppercase;
+        font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #046ed8e9;
+        }
+      }
+      .reset {
+        color: tomato;
+        cursor: pointer;
+
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
